@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "/"
 @model Cucui_Elena_Lab8.Pages.Books.IndexModel
 
 @{
@@ -22,9 +22,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.Book[0].Price)
             </th>
-            <th> 
-            @Html.DisplayNameFor(model => model.Book[0].PublishingDate) 
+            <th>
+                @Html.DisplayNameFor(model => model.Book[0].PublishingDate)
             </th>
+            <td>
+                @Html.DisplayNameFor(model => model.Book[0].Publisher) 
+                </ td>
             <th></th>
         </tr>
     </thead>
@@ -41,8 +44,12 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PublishingDate) 
-                </td>
+                @Html.DisplayFor(modelItem => item.PublishingDate)
+            </td>
+            <td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Publisher.PublisherName)
+            </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |

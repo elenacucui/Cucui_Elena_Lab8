@@ -36,7 +36,9 @@ namespace Cucui_Elena_Lab8.Pages.Books
             {
                 return NotFound();
             }
+            ViewData["PublisherID"] = new SelectList(_context.Set<Publisher>(), "ID", "PublisherName"); 
             return Page();
+          
         }
 
         // To protect from overposting attacks, enable the specific properties you want to bind to, for

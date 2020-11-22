@@ -23,7 +23,9 @@ namespace Cucui_Elena_Lab8.Pages.Books
 
         public async Task OnGetAsync()
         {
-            Book = await _context.Book.ToListAsync();
+            Book = await _context.Book
+                .Include(p=>p.Publisher)
+                .ToListAsync();
         }
     }
 }
