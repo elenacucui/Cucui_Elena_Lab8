@@ -4,14 +4,16 @@ using Cucui_Elena_Lab8.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Cucui_Elena_Lab8.Migrations
 {
     [DbContext(typeof(Cucui_Elena_Lab8Context))]
-    partial class Cucui_Elena_Lab8ContextModelSnapshot : ModelSnapshot
+    [Migration("20201122085852_PublishingDate")]
+    partial class PublishingDate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
